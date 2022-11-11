@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+    <context:property-placeholder location="classpath:employeeInfo.properties"/>
+    
+	<bean id="emp" class="com.cjc.Employee">
+	 <property name="empId" value="${employee.empId}"/>
+	 <property name="ename" value="${employee.ename}"/>
+	 <property name="eaddress" value="${employee.eaddress}"/>
+	</bean>
+	<bean id="emp1" class="com.cjc.Employee">
+	 <property name="empId" value="${employee1.empId}"/>              
+	 <property name="ename" value="${employee1.ename}"/>
+	 <property name="eaddress" value="${employee1.eaddress}"/>
+	</bean>
+	<bean id="mgr" class="com.cjc.Manager">
+	<property name="mid" value="${manager.mid}"/>
+	<property name="projectName" value="${manager.projectName}"/>
+	<property name="membersInTeam" value="${manager.membersInTeam}"/>
+	</bean>
+</beans>

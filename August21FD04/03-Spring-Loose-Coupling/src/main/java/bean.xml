@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+   <bean id="eye1" class="com.cjc.body.HumanEye"></bean>
+   
+   <bean id="ear1" class="com.cjc.body.HumanEar"></bean>
+   
+   <bean id="heart1" class="com.cjc.body.HumanHeart"></bean>
+
+ 
+ <bean id="human" class="com.cjc.body.Human">
+  
+   <property name="eye" ref="eye1"></property>
+   <property name="ear" ref="ear1"></property>
+   <property name="heart" ref="heart1"></property>
+     
+ </bean>
+</beans>
